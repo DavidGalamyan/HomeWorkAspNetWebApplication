@@ -10,7 +10,7 @@ namespace HomeWorkAspNetWebApplication.Domain.Interfaces
         public bool Update(PersonRequest personRequest, int id);
         public bool Delete(int id);
         public Person GetById(int id);
-        public Person GetByFullName(string firstName, string lastName);
+        public List<Person> GetByFullName(string firstName, string lastName);
         public IEnumerable<Person> GetPagination(int skip, int take);
         public IEnumerable<Person> GetAll();
     }

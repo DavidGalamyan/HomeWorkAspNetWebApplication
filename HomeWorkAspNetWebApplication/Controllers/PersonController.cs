@@ -1,6 +1,7 @@
 ﻿using HomeWorkAspNetWebApplication.Domain.Interfaces;
 using HomeWorkAspNetWebApplication.Models.Dto;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace HomeWorkAspNetWebApplication.Controllers
 {
@@ -17,8 +18,8 @@ namespace HomeWorkAspNetWebApplication.Controllers
         [HttpGet("search")]
         public IActionResult GetByFullName([FromQuery] string firstName, [FromQuery] string lastName)
         {
-            var result = _personManager.GetByFullName(firstName, lastName);
-            if (result != null)
+            var result = _personManager.GetByFullName(firstName, lastName);            
+            if (result.Count != 0)
             {
                 return Ok(result);
             }

@@ -80,9 +80,9 @@ namespace HomeWorkAspNetWebApplication.Data.Inplementation
                 return false;
             }
         }
-        public Person GetByFullName(string firstName, string lastName)
+        public List<Person> GetByFullName(string firstName, string lastName)
         {
-            var result = Persons.FirstOrDefault(person => (person.LastName == lastName)
+            var result = Persons.FindAll(person => (person.LastName == lastName)
             && (person.FirstName == firstName));
             return result;
         }

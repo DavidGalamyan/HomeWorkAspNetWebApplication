@@ -40,9 +40,9 @@ namespace HomeWorkAspNetWebApplication.Domain.Inplementation
             return result;
         }
 
-        public Person GetByFullName(string firstName, string lastName)
+        public List<Person> GetByFullName(string firstName, string lastName)
         {
-            var result = _personRepository.GetByFullName(firstName, lastName);
+            var result = _personRepository.GetByFullName(firstName, lastName);            
             return result;
         }
 
