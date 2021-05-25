@@ -25,7 +25,7 @@ namespace HomeWorkAspNetWebApplication.Controllers
             }
             else
             {
-                return BadRequest("Нету персоны с таким ФИ");
+                return NotFound("Нету персоны с таким ФИ");
             }
         }
         [HttpGet("{id}")]
@@ -38,7 +38,7 @@ namespace HomeWorkAspNetWebApplication.Controllers
             }
             else
             {
-                return BadRequest("Нету персоны с таким Id");
+                return NotFound("Нету персоны с таким Id");
             }
         }
         [HttpGet("all")]
@@ -77,7 +77,7 @@ namespace HomeWorkAspNetWebApplication.Controllers
             }
             else
             {
-                return BadRequest("Такой персоны не существует");
+                return NotFound("Такой персоны не существует");
             }
         }   
         [HttpDelete("{id}")]
@@ -90,7 +90,7 @@ namespace HomeWorkAspNetWebApplication.Controllers
            }
            else
            {
-                return BadRequest("Id не найдено");
+                return NotFound("Id не найдено");
            }
         }
 
